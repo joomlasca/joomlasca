@@ -18,7 +18,8 @@ if (!defined('_JDEFINES')) {
 	require_once JPATH_BASE.'/includes/defines.php';
 }
 
-require_once JPATH_BASE.'/includes/framework.php';引入joomla构架
+//引入joomla构架
+require_once JPATH_BASE.'/includes/framework.php';
 
 // Mark afterLoad in the profiler.
 JDEBUG ? $_PROFILER->mark('afterLoad') : null;
