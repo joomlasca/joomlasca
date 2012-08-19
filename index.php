@@ -18,7 +18,7 @@ if (!defined('_JDEFINES')) {
 	require_once JPATH_BASE.'/includes/defines.php';
 }
 
-require_once JPATH_BASE.'/includes/framework.php';
+require_once JPATH_BASE.'/includes/framework.php';引入joomla构架
 
 // Mark afterLoad in the profiler.
 JDEBUG ? $_PROFILER->mark('afterLoad') : null;
@@ -26,29 +26,29 @@ JDEBUG ? $_PROFILER->mark('afterLoad') : null;
 // Instantiate the application.
 $app = JFactory::getApplication('site');
 
-// Initialise the application.
+// Initialise the application.初始化应用程序
 $app->initialise();
 
 // Mark afterIntialise in the profiler.
 JDEBUG ? $_PROFILER->mark('afterInitialise') : null;
 
-// Route the application.
+// Route the application.路由应用程序
 $app->route();
 
 // Mark afterRoute in the profiler.
 JDEBUG ? $_PROFILER->mark('afterRoute') : null;
 
-// Dispatch the application.
+// Dispatch the application.分派应用程序
 $app->dispatch();
 
 // Mark afterDispatch in the profiler.
 JDEBUG ? $_PROFILER->mark('afterDispatch') : null;
 
-// Render the application.
+// Render the application.渲染应用程序
 $app->render();
 
 // Mark afterRender in the profiler.
 JDEBUG ? $_PROFILER->mark('afterRender') : null;
 
-// Return the response.
+// Return the response.返回响应
 echo $app;
